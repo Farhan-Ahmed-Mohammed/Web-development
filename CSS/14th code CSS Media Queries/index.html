@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+
+        /* we use media queries to make websites responsive here resposive means based on device websites change it is like dynamic not static */
+
+        body{
+             background-color: red;
+        }
+
+        @media screen and (orientation landscape) {
+            /* when orientation is landscape the it bcms blueviolet */
+            body{
+                border:2px solid blueviolet;
+            }
+        }
+
+        /* here screen means of we are using in  mobile,laptop or ipad then its screen */
+
+        /* it means if out screen max width is 455px then blue color is applied else it is just red  if small device like phone then red if big screen device like laptopn then blue color and our flex-direction change to column form the row*/
+        @media only screen and (max-width: 455px){
+            body{
+                background-color: blue;
+            }
+
+            .boxes{
+                flex-direction: column;
+            }
+        }
+
+        /* @media not/only mediatype and (expressions)
+        css-code*/
+
+        .boxes{
+            display: flex;
+        }
+
+        .box{
+            width: 344px;
+            height: 344px;
+            background-color: steelblue;
+            padding: 3px;
+            margin: 3px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div>
+         Hey i am red color
+    </div>
+
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+   
+</body>
+</html>

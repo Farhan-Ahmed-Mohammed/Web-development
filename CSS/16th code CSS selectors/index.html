@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* .box:first-child{
+            background-color: red;
+        } */
+
+        .box::first-line{
+            color: yellow;
+            /* this means every first line of box bcms yellow based on device's first line */
+        }
+
+        .boxes *{
+            color: blue;
+            border: 2px solid black;
+
+            /* here * is universal selector means to all the elements inside the boxes these are applied */
+        }
+
+        p,a,.box [data-color="primary"]{
+            padding-top: 45px;
+
+            /* its a attribute selector where data-color is priamry we get padding-top of 45px and we can do grouping of the just by writing the tag name before attribute selector */
+        }
+
+        .box:nth-child(even){
+            background-color: blue;
+
+            /* here if the nth child is even this is applied if we write odd it takes from odd number and it starts counting from 1*/
+        }
+
+        .box:nth-last-child(1){
+            background-color: red;
+
+            it make the bgcolor red for the last child if we write nth-last-child(2) it makes the last 2nd child as red
+        }
+
+        .boxes::before{
+            content:"Farhan is good";
+
+            /* here before means begore all the boxes elements this is inserted */
+        }
+
+        .boxes::after{
+            content: "Sigma course is good";
+            color: brown;
+
+            /*here after all the boxes content this is inserted */
+        }
+
+        .boxes::selection{
+            color: aqua;
+            background-color: black;
+
+            /* if we select the text by clicking right click then the color of text changes to aqua here and this background color changes to back*/
+        }
+
+        .box::first-letter{
+            color: green;
+            font-size: 30px;
+
+            /* with this the first letter size will change and font size will also change */
+        }
+
+        input::placeholder{
+            color: blue;
+
+            /* here the placeholder text color will change  */
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">I am first box</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto minima maxime rerum quia? Omnis asperiores dolorum molestias, ullam perspiciatis blanditiis qui eum quisquam odio inventore eaque consequatur eveniet iure distinctio id! Architecto nam quae rerum recusandae excepturi ducimus dolorem pariatur, delectus, facere eaque obcaecati optio.</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <input type="text" placeholder="Type you name here">
+    </div>
+</body>
+</html>

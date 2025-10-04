@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Form to apply for Internship</h1>
+    <form action="post">
+        <!--action=post means the form data is send to data to server in hidden from url-->
+        <div>
+            <label for="username">Enter you username</label>
+        <!--Before input box it displays the above messasge and label for must match it in the input-->
+
+        <input type="text" id="username" name="username" placeholder="Enter your username">
+
+        <!--in input order dont matter we can write input id="name" type like this in any order-->
+
+        <!--place holder means in light letters it is displaying in input box once we start entering the text it disappears and it means it must be unique like phone no it should be unique for us-->
+        </div>
+        
+        <!--name attribute is used to send data to server when form is submitted it acts like as key in key-value pair-->
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <!--we gave names same so only one can we selected from male and female-->
+
+        <div>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Subscribed</label>
+        </div>
+
+        <div>
+            <textarea name="comment" rows="4" cols="50">Enter your comment here...
+            </textarea>
+        </div>
+
+        <div>
+            <select name="fruits">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+            </select>
+        </div>
+    </form>
+</body>
+</html>

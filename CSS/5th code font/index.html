@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+        /* if any font is not there we can import it form google fonts */
+        h1{
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* here these are differne types of font it selects one which is available in our system */
+        p{
+            font-family:'Baloo Bhai 2', sans-serif;
+            /* we are writing sans-serif as backup bcoz it is present in all system if our selected font is not present then this sans-serif will be applied */
+            font-style: italic;
+            font-weight: 500;
+            text-decoration: underline;
+            font-size: 20px;
+        }
+
+        h2{
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration-color: aqua;
+            text-decoration-style: dashed;
+            /* indent means it moves left side */
+            /* text-indent: 45px; */
+            text-align: center;
+        }
+
+        .lorem{
+            border: 2px solid red;
+            width: 145px;
+            word-break: break-all;
+            /* word break means it breaks all words and width means when it text should go to next line*/
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1>Fonts</h1>
+        <h2>About fonts</h2>
+        <p class="lorem">This is a video on fonts</p>
+    </div>
+    
+</body>
+</html>

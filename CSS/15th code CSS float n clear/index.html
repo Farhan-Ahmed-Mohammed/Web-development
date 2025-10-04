@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear</title>
+    <style>
+
+        .cards{
+            border: 2px solid black;
+        }
+        /* here if we apply float to left means image wii be at left and the text comes to the right to the image instead of down b4 it was coming down now image allows text to its right*/
+        img{
+            float: left;
+            display: flow-root;
+        }
+
+        /* problem is with float that if iamge size is big then it will overflow from the container to avoid this we use flow root */
+
+        .card{
+            border: 2px solid red;
+        }
+
+        .card:nth-child(3){
+            background-color: aqua;
+            clear: left;
+
+            /* clear left means there should not be any element or image to the left of this text if we dont wnat to the right we can use clear: right; and if we dont want at both the side wswe can use clear: both;*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="iamge.png" width="230">
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus asperiores debitis molestias hic qui voluptate veritatis! Harum, rem consequatur maxime ad repellat officia, et, debitis blanditiis eos qui numquam ea animi. Ducimus, qui illum</p>
+        </div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, maxime ipsa dolorem quam est qui temporibus consequuntur tempore quasi quod laboriosam neque ex veritatis deserunt excepturi odio. Est minus consectetur ullam illum odit soluta corporis provident tenetur perspiciatis voluptatum. Vitae molestiae amet sed dolor incidunt.</div>
+        <div class="card">card 2</div>
+        <div class="card">card 3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        /*Element selector*/
+
+        div{
+            color: blue;
+        }
+        /* Class Selector */
+        .red{
+            background-color: red;
+        }
+
+        /* Id selector */
+        #green{
+            background-color: green;
+        }
+
+        /* child selector means a paragraph inside div becomes color which we give and it should be direct child of div inside div other tag and inside that if we have <p> then this property will not bw applied on it */
+
+        div > p{
+            color:aliceblue;
+            background-color:aqua;
+        }
+
+        /* Descendant Selector it should be inside div no mater if it is not direct child */
+
+         div p{
+            color:aliceblue;
+            background-color:aqua;
+        }
+
+        /*Universal Selector means for all it is applied margin 0 and padding 0 means from start of the page they appear*/
+
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        /* Pseudo Selector after visiting the link it bcms yellow and b4 visiting its green*/
+        a:visited{
+            color:yellow;
+        }
+
+        a:link{
+            color:green;
+        }
+        
+        /* here a:active means while clicking it bcms red */
+        a:active{
+            background-color: red;
+        }
+
+        /* hover means when we bring our cursor to that link */
+        a:hover{
+            background-color: black;
+        }
+
+        p:first-child{
+            background-color: bisque;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="one">
+        <p>I am first child of main</p>
+        <p>I am 2nd child of main</p>
+    </main>
+    <div class="red">
+        I am a div tag
+        <article>
+             <p> I am a paragraph inside div </p>
+        </article>
+       
+    </div>
+
+    <!--if we dont want to add red color to all div tags we can use class and write that class in styles its class selector and other is id selector-->
+
+    <div id="green">
+        I dont want same color as above div
+    </div>
+
+    <a href="https://www.google.com">GO to Google</a>
+</body>
+</html>

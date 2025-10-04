@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*question is to genrate 
+        Adjectives:
+        crazy
+        Amazing
+        Fire
+
+        shop Name:
+        Engine
+        Foods
+        Garments
+
+        Another Word:
+        Bros
+        Limited
+        Hub
+
+        we have to choose one one word from  the above three without array
+        */
+        let rand=Math.random()
+        let first,second,third;
+        if(rand<0.33){
+             first="crazy"
+            //0 0.33 0.66 1 rand means it generates random value
+        }
+        else if(rand<0.66 && rand>=0.33){
+            first="Amazing"
+        }
+        else{
+            first="Fire"
+        }
+        //lets generate 2nd word
+
+        rand=Math.random()
+         if(rand<0.33){
+             second="Engine"
+            //0 0.33 0.66 1 rand means it generates random value
+        }
+        else if(rand<0.66 && rand>=0.33){
+            second="Foods"
+        }
+        else{
+            second="Garments"
+        }
+        //lets generate 3rd word
+
+        rand=Math.random()
+         if(rand<0.33){
+             third="Bros"
+            //0 0.33 0.66 1 rand means it generates random value
+        }
+        else if(rand<0.66 && rand>=0.33){
+            third="Limited"
+        }
+        else{
+            third="Hub"
+        }
+
+        console.log(`${first} ${second} ${third}`) // it not in quotes its in esc below key if we keep on reloding it then keeps on changing as we ised random function
+    </script>
+</body>
+</html>

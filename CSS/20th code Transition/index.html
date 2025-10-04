@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .container{
+            background-color: blanchedalmond;
+            width: 50vw;
+            height: 40vh;
+        }
+
+        .box{
+            background-color: aqua;
+            width: 5vw;
+            height: 4vh;
+            transition-property:all;
+            /* here we have to write the class name in whichwe are appling the transitio property we can also use all to apply transiotn to all the classes like when transition happens color also changes*/
+
+            transition-duration: 3s;
+            /* it means when transition happens it takes 3 seconds to hcange from one state to other state */
+
+            transition-timing-function: ease-in-out;
+            /* timing function arel like linear means first low then speed increase and other is ease in out first speed then constant and we can make out own timing fucntion */
+
+            transition-delay: 1s;
+            /* delay means after how much time it should effect  or start the transition*/
+
+            /* to write all the above 4 in one we can weroite as  */
+            /* transition: all 3s ease-in-out 1s; */
+        }
+
+        .translate{
+            transform: translateX(10vw) translateY(10vh) scale(2);
+            /* here it translates 10vw on x and 10vh on y and size increases 2 times */
+
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate">
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+    <style>
+        /* The specificity of this element h1 is 1 */
+        h1{
+            color: aqua;
+        }
+
+        /* The specificity of this is 10  */
+
+        .yellow{
+            color: yellow !important;
+        }
+
+        /* if we write !important then that color it get it dont follow any rules now its like its specifity is 100000*/
+
+        /* if we have smthng like h1.yellow it is element + class so 1+10=11 is specificity */
+
+        .cred{
+            color: red;
+        }
+
+        .cpurple{
+            color:purple;
+        }
+
+        /* for same we applied 4 colors but w got onyl purple color bcoz of cascade algorithm this algorithm decides which decides what color to apply it has some rules like last class seletor color will be applied  if differnet type of seletors like id class inline then specificity is used inline>id>class>element>universal selector means inline higest priority*/
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="yellow cred cpurple">CSS Specificity</h1>
+    </div>
+</body>
+</html>

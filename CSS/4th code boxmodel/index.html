@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BoxModel</title>
+    <!--In CSS every thing is box what ever we made in html is box in CSS-->
+    <style>
+        /* browser automatically gives some margin and padding to reset it we use the below universal selector */
+        *{
+            margin:0;
+            padding:0;
+        }
+        /* padding meeans from 4 sides we get it and properties are applied to margin*/
+
+        .box{
+            background-color: aqua;
+        }
+
+        /* for margin the properties are not applied it is just like outside of box */
+
+        .box1{
+            color: yellow;
+            padding: 10px;
+            margin:25px;
+            border:2px solid blue;
+            height:200px;
+            box-sizing:border-box;
+        }
+        /* box sizing:border box means the height is including border and padding if normal height we give without box sizing then it is the height of only element i.e excluding border and padding*/
+
+        .box2{
+            color: red;
+            padding: 10px;
+            margin:25px;
+            border:2px solid black;
+            height:200px;
+            box-sizing:border-box;
+        }
+
+        /* margin collapse means if 2 elements margin overlap then only one max margin is applied not two from above we can see bw them two we have 25 margin not 50 bcz max of 25,25 it takes i.e 25 only */
+
+    </style>
+</head>
+<body>
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
+</body>
+</html>

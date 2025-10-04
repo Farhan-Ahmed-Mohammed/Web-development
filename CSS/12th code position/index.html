@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+         }
+
+         /* position is a property in css that is by default static means we cannot change its position from any side like top,bottom */
+
+         .box1{
+            background-color: aqua;
+             position: sticky; 
+            top: 0px;
+            height: 111px;
+            width: 100%;
+            margin: 0;
+            padding: 0; */
+            /* z-index: 1; */
+            position: absolute;
+            top: 0px;
+            left: 3px;
+         }
+
+         /* if we use position sticky every thing will scroll about it like some navigation bar in some websites  */
+
+         /* if position is absolute then it moves to relative to its nearest ansyster if parent class has a position then it moves relative to parent class or else it moves relative to body if no position in body then it moves realative to html (means is top is 0px means it will be at top of page) parent realtive means if parent class is a box then it adjust realtive to that box if parent postion is fixed then box1 will also be fixed if it is sticky box1 will also be sticky*/
+
+         /* to get our box1 above box2 if z index value of box1 is more than box2 then we get it above box2 overlap */
+
+         /* relative means we can apply top,bottom properties to do that we have to make it relative */
+         .box2{
+            background-color: aquamarine;
+            position: relative;
+            
+         }
+
+         /* if we use position fixed then first it moves to that position which we give like botton 0px and left 25vw then it will be fixed there even if we scroll the fwebsite it will be there only like some ads are poped up on screen and even we scrool our screen they will be there only*/
+         .box3{
+            background-color: bisque;
+            /* position: fixed;
+            bottom: 0px;
+            left: 8vw; */
+         }
+
+         .box4{
+            background-color: purple;
+         }
+
+         .box{
+            border: 2px solid black;
+            height: 133px;
+            width: 80vw;
+            padding: 3px;
+            margin: 3px;
+         }
+
+         .parent{
+            /* transfor,filter , or prespective properties can also make an element appear as positioned */
+            padding: 43px;
+            margin: 34px;
+            border: 2px solid purple;
+            /* position: absolute; */
+            /* transform: translate(0); */
+            /* filter: invert(0); */
+            /* perspective: 0em; */
+
+            /* with transform  filter and prespective also its child classes are positioned relative to its parent  */
+
+         }
+    </style>
+</head>
+<body>
+   <div class="parent">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+   </div>
+    
+</body>
+</html>

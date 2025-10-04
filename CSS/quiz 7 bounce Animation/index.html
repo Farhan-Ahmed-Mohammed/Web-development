@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Animation</title>
+    <style>
+        
+        .container{
+            height: 80vh;
+            width: 80vw;
+            background-color: blue;
+            position: relative;
+
+            /* here relative means wrt to this container we put others which are absolute position*/ 
+        }
+
+        .box{
+            
+            width: 120px;
+            height: 120px ;
+            background-color: red;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            border-radius: 80px;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+            animation:animateX 3s linear infinite,animateY 1s ease-out infinite alternate;
+            /* it should look like bounsing so we use ease out */
+            
+        }
+
+        @keyframes animateX{
+            from{
+                left:0%;
+            }
+
+            to{
+                left:100%;
+                
+            }
+        }
+
+        @keyframes animateY{
+            from{
+               bottom: 0%;
+            }
+
+            to{
+                bottom: 100%;
+            }
+        }
+            
+        
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box transition">
+
+        </div>
+    </div>
+</body>
+</html>

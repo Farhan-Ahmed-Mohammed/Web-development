@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow and outliers</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            padding: 34px;
+            box-shadow: 5px 15px 5px #888888;
+        }
+
+        .text-element{
+            text-shadow: 2px 2px 4px #fc0000;
+            outline: 2px solid black;
+            border: 2px solid green;
+            border-radius: 8px;
+            /* it bcms like a curve border i.e edges are not sharp they are like curve with radius */
+            outline-offset:27px;
+
+            /* just to show difference between out outline and border we wrote both we can change outline border by using outline offset for border we dont have offset like outline */
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am a box
+    </div>
+
+    <p class="text-element">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem officia commodi nulla possimus, assumenda corrupti alias repellat eaque deleniti harum provident laboriosam praesentium magni hic maiores reiciendis! Sed id ex mollitia quaerat?
+    </p>
+</body>
+</html>

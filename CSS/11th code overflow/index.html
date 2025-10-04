@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .box{
+            width: 30vw;
+            height: 10vh;
+            border: 2px solid black;
+            overflow: auto;
+            white-space: nowrap;
+            /* text-overflow: ellipsis; */
+            overflow-x: hidden;
+            overflow-y: scroll;
+            /* overflow: hidden scroll; this also means the same as above 2 line instead of writing x n y we write 2 properties in overflow*/
+
+            /* this means if overflow then scroll it auto means if it overflows then scroll bar we get but it we write overflow: scroll then even though there is no overflow w can see the scroll bar white-sapce nowrap means show text only in horizonal and text overflow ellipse means it text is overflown ... we can see, not the text */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero illo, vel inventore eveniet ipsa esse maiores ipsum placeat consectetur sunt laudantium amet veritatis sint adipisci sed. Dolor soluta illo consectetur est pariatur! Tempore quis perferendis exercitationem! Obcaecati fuga perspiciatis asperiores optio alias nam est quo.
+    </div>
+</body>
+</html>

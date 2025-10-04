@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-fit</title>
+    <style>
+
+        /* object-fit is used ot fit the image in the given dimentions without changing the image aspect ratio i.e just like original image */
+
+        .container{
+            height: 634px;
+            width: 688px;
+            border: 2px solid black;
+            background-color: aquamarine;
+
+            /* background-image: url("https://images.unsplash.com"); */
+            /* we can also give a image as background */
+
+            /* background-position: top right; */
+            /* if we wan tot see the top right part of the image we use it we can also use center if we keep image as background then it is difficult to download it if iamge is small and we put it as background in the box then it repeats till it fill the ill the */
+
+            /* background-repeat: no-repeat; */
+            /* with this it will not repeat int he background even if ut is small in size we can also use repeat-x or repeat-y */
+        }
+
+        img{
+            height: 634px;
+            width: 688px;
+            object-fit: cover;
+
+            /* it covers the width and heigth given in this img blockso we should give the same height and width as the box in which we want to fit it but some of iamges potions is cut*/
+
+            /* object-fit: contain; */
+            /* with this image is not cut but it will not cover hte box but we get the full image */
+
+            /* object-position: top right; */
+            /* here it will show the top right and the other part will be cut we can choose whihc part we want to display and which part we want to cut here we cal also use values like 50% and 50%*/
+
+            object-fit: fill;
+            /* it will fill the image int he width and heght we gave but it saspect ratio will be changed */
+
+            object-fit: scale-down;
+            /* with this our image will becm half in bottom */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="iamge.png">
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformes</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: antiquewhite;
+            border: 2px solid black;
+            transform: rotate(0.25tur)
+            /* here 1 turn means 360 degree and 0.25 means90 degree */
+
+             transform: rotateX(40deg);
+
+             /* it will rotate 40degree in x axis we can also rotate it wrt y amd z axis*/
+
+             /* transform: scale(1); */
+
+             /* scale means it wil increase 1.5 times  */
+             /* transform: skew(34deg); */
+
+             /* skew ,means it is like parallelogram */
+
+             /* transform: translate(34px) skewX(40deg) ; */
+             /* it means it will move 34px from both x and y axis and we cal also apply multiple transfomr properties by writing them side by side we can also translate in % if we do -100 it will be hidden in upwards direction*/
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container{
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            box
+        </div>
+    </div>
+</body>
+</html>

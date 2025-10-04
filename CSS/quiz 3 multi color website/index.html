@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        :root{
+            --text-color: white;
+            --primary-color: purple;
+            --secondary-color: green;
+        }
+
+        nav{
+            background-color: var(--primary-color);
+        }
+
+       ul{
+        list-style: none;
+        /* with this list style none that dot before the list is gone */
+        display: flex;
+        /* dsipaly flex means they all come in one line */
+       }
+
+       ul li{
+        padding: 23px;
+       }
+
+      
+       ul li a{
+        color: var(--text-color);
+        text-decoration: none;
+        /* with text dec none the underline below the anchor tag is gone */
+       }
+    </style>
+</head>
+<body>
+    <nav>
+       <ul>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/'>About</a></li>
+        <li><a href='/'>Contact</a></li>
+        <li><a href='/'>Help</a></li>
+       </ul>
+    </nav>
+</body>
+</html>

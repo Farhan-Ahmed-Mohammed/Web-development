@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 45px;
+            width: 56px;
+            border: 2px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!--document.body.childNodes type this in console then we get all the child nodes in this first it shows as text means we gave space then i considers it also as a child next child it gives as div we can also access childnode by document.body.childNodes[1] means it gieves us the second child node as it is 0 indexed we can also access the childs of the chidl nodse like document.body.childNodes[1].childNodes and inseted og writing document.body.childNodes[1] every time we can also declare a variable like let temp=document.body.childNodes[1] and we can access its children like temp.firstchild as it is givening sapce also as a child and we dont want it so we can use like firstelementchild then it will ignore the text i.e space as a child--> 
+    <div class="container">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

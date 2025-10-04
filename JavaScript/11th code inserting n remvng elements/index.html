@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--read notes to get all the content-->
+    <!--document.querySelector(".container").inner HTML   // with this we can see the inner html i.e what ever is written inside this container and with the .innerText we can see the text we wrote in this with outer html we get that container and also what is writte in it to hide element we can use hidden=true  we can also change inner html as document.querySleector(".box").innerHTML="Hey i am harry"-->
+    <div class="container">
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <script>
+            // let div=document.createElement("div");
+            // div.innerHTML="I have been inserted <b>by Farhan</b>";
+            // div.setAttribute("class", "created");
+            // document.querySelector(".container").append(div) //when we use .append we can see that element at the end we can use .before to get it before the element 
+            let cont=document.querySelector(".container")
+            cont.insertAdjacentHTML("afterend", "<b> I am under water please help me </b>")  // here we wroete after end means after the above text end and we also have before begin .remove to remove and .toggle means if that class is ther remove if not there then add
+        </script>
+    </div>
+</body>
+</html>

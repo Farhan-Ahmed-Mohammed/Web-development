@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+
+        /* here root is a variable like in python we write as a=10 we can give colors ,padding,background urls,numbers and many things in :root or variable*/
+
+        :root{
+            --color: blue;
+            --seccolor: lightblue;
+            --defpad: 23px;
+            --defop: 0.2;
+        }
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .nav{
+
+            /* here var means the variable .root which we declared  and that color is applied we can use this variables any number of times if we change color in that variable where ever we used that variable the color changes*/
+            background-color: var(--color);
+        }
+
+       
+
+        ul{
+            display: flex;
+             /* display flex make one or more lines text into one single line */
+        }
+
+        ul li{
+            opacity: var(--defop);
+            /* opacity means it will become light or shaded normal we write this opacity as opacity: 0.3 */
+            list-style: none;
+            /* list style none means that . we get before home about contact is gone only the word appears*/
+            padding: var(--defpad);
+
+            /* we can also use that variable for border also */
+            border: 2px solid var(--seccolor);
+        }
+
+        ul li:first-child{
+            /* here we declared color as local variable so this color is applied not the one at .root only for this block it is applied*/
+            --color: purple;
+            background-color: var(--color);
+             /* background-color: var(--color,blue); if variable is not found or not there any variable named color then put blue color it means but if color varable is avilable then this blue color is not applied*/
+        }
+
+        .container{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit labore, deserunt veniam doloribus asperiores doloremque ipsum hic excepturi molestiae! Neque maiores labore dignissimos praesentium repudiandae rem iste? Dolor corporis similique, enim possimus, dolore esse a voluptates optio nulla accusamus voluptatum quidem cupiditate sint. Mollitia, necessitatibus!</div>
+
+</body>
+</html>

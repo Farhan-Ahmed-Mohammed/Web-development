@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+    <style>
+        .container{
+            border: 2px solid red;
+
+            display: flex;
+             /* we should use this flex in container not in the items flex default is left to right that is flex direction is left to write default
+             */
+
+            height: 80vh;
+            justify-content: center;
+            /*  to make them as center horizontally we can also use flex end to get them at right i.e end of flex and flex left for them to be at left of flex space between means between them we get sapce and space around means around all teh items we get space */
+
+            /* align-items: center; */
+
+            /* align-content: center; */
+
+            /* if we have more than one line we use align contetn center here we can also use flex start and flex end if start then form the start they are represented*/
+
+
+            /* to make then vertically center we use it */ 
+
+            /* flex-direction: column-reverse; */
+
+            /* it makes them as column i.e top to bottom and if we write column reverse tne it will reverse them */
+            flex-wrap: wrap;
+
+            /* if we hace too many boxes then we use wrap for some of them to come in next line we also have wrap reverse means they are wrapped in reverse order */
+
+            flex-flow: row wrap;
+
+            /* here first we say where like row or column and next we say type of wrap just wrap or wrap-reverse */
+
+            gap: 30px;
+
+            /* means gap between items bcms 30px */
+
+            row-gap: 20px;
+
+            /* gap between the rows bcm 20px */
+
+            column-gap: 10px;
+
+            /* gap: 40px 10px; it means the row gap is 40px and column gap is 10px */
+
+        }
+
+        .item{
+            flex-grow: 1;
+            height: 92px;
+            width: 92px;
+            border: 2px solid black;
+            margin: 4px;
+            /* margin 4px means it is applied to all the directions top,left,right,bottom */
+            background-color: blueviolet;
+        }
+
+        .order-1{
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+        .order-10{
+            order: 10;
+        }
+
+        /* which class has higest order that come at end low order first default order is 0 i.e if we dont give any order it means its order is 0 */
+
+        .item2{
+            flex-grow: 2;
+            flex-shrink: 2;
+
+            /* it aligns this particular element but b4 this we ahve to remove the align content from the container*/
+
+            /* flex shrink means it shrinks when of screen size is reduced */
+
+            /* it takes 2 items space but b4 using it we have to first write in .item class that flex-grow: 1 means all have felx grow 1 and now if we write here 2 than this occupies 2 items space*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item order-10">1</div>
+            <div class="item item2">2</div>
+            <div class="item">3</div>
+            <div class="item order-1">4</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </main>
+</body>
+</html>

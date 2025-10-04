@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+
+        /* we can also use transition but more complex animation is there we use animation or else we use transition */
+
+        .container{
+            background-color: blueviolet;
+            width: 30vw;
+            height: 80vh;
+        }
+
+        .box{
+            width: 34px;
+            height: 45px;
+            background-color: aqua;
+            animation-name: myAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            /* it means how many times it has it iterate */
+
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+
+            /* animation-direction: reverse; */
+            /* here reverse means after one animation is completed then it starts from reverse */
+
+            /* animation-play-state: paused; */
+
+            /* we can use thes all just in single line by writitng like this */
+            animation: myAnimation 3s ease-in-out 1s infinite reverse,second 3s ease-in-out 3s;
+
+            /* to put multiple animations we put , after one animation is completed */
+        }
+
+        @keyframes myAnimation {
+            from{
+               background-color: red;
+            }
+            to{
+                background-color: yellow;
+                 transform: translateX(100px);
+            }
+
+        }
+
+        /* we can make multiple animation classes */
+
+        @keyframes second{
+            0%{
+                transform: rotate(100deg);
+            }
+
+            20%{
+                transform: rotate(200deg);
+            }
+
+            50%{
+                transform: rotate(220deg);
+            }
+
+            80%{
+                transform: rotate(100deg);
+            }
+
+            100%{
+                transform: rotate(300deg);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+</html>

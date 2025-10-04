@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing units</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            font-size: 12px;
+        }
+
+        /* here html is root element */
+        .box{
+            border:2px solid black;
+            /* width:2048px; */
+            /* here as our lapton screent can handle this much width we are using it but in phone we dont have this much width so we use vw it takes according to our screen*/
+            width: 80vw;
+            margin: 23px auto;
+            /* it makes as centre for in line element only not for box elements if we write 23px means it is 23 from top left right is auto*/
+            background-color: aqua;
+        }
+
+        .container{
+            box-sizing:border-box;
+            border: 2px solid black;
+            width: 80vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+            margin: 23px auto;
+            font-size:16px;
+            background-color: aquamarine;
+        }
+
+        /* here min-height 80vh means if there is content or not it dwill be 80vh but max height keep on increasing if we keep on adding content */
+
+        /* container p inherites font size from above container i.e 16px and 1em means its same but if we do 2em then font size bcms 16X2=32 px in p tag only but .containerhas 16 only if we dont give by default is 16 that it takes and multipies with 2*/
+
+        .container p{
+            /* font-size: 1em; */
+            font-size: 2rem;
+            width: 50%;
+        }
+
+        /* widht 50% means paragraph's just above parents 50% width as parent width is 80vw*/
+
+        /* when we use rem it multiplies with the font size of root element thatnis here html is 12X2=24 px but now even if we use 2em we get 24 bcz font size can be inherited and here we did not give any other font size in our code so it will take the fint size of root element */
+
+        .mycount{
+            border: 2px solid black;
+            box-sizing: border-box;
+            margin: 23px auto;
+            color: rgb(0, 0, 0);
+            font-size: 22px;
+            width: 80vw;
+        }
+
+        /* vmin is smaller of height and width in our laptop vmin is height bcoz it is smaller than width but in phone vmin is widht  */
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a box
+    </div>
+
+    <nav class="container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nemo tempore possimus quaerat quidem nam amet corporis, quas tenetur, praesentium, necessitatibus neque! Ab aperiam quam, fugit dolorem nam itaque nisi corporis consectetur nulla porro.
+        </p>
+
+        
+    </nav>
+
+    <div class="mycount">
+        I am another container
+    </div>
+</body>
+</html>

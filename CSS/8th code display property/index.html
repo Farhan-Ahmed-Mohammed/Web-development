@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            border: 2px solid blue;
+            display: inline-block;
+            padding: 45px;
+            margin: 34px;
+            width: 334px;
+            /* display: none;  if we do display none all the boxes are gone and the text we wrote in box class is gone*/
+            /* now that block div bcms inline but if we write only inline padding and margin  is not applied from the top side it is applied to only 3 sides and width also not applied to only inline so we use inline-block so that these all properties are applied*/
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am a box
+    </div>
+
+    <div class="box">
+        also a nice box
+    </div>
+
+    <!--As div is a block element we get it in 2 different lines -->
+    <!--By using CSS display property we can change this block to inline-->
+
+    <span>I am good</span>
+    <span>Boy</span>
+
+    <!--As span is a inline element we will get the above in only one line-->
+</body>
+</html>

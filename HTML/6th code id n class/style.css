@@ -1,0 +1,14 @@
+.red{
+    color: red;
+}
+
+.bg-yellow{
+    background-color: yellow;
+}
+
+/* in css . means class and # means id here red and bg-yello are class names*/ 
+
+#firstdiv{
+    background-color: red;
+}
+
